@@ -18,6 +18,8 @@ defmodule PostiqexWeb.Router do
     pipe_through(:browser)
 
     get("/", PageController, :index)
+
+    live("/databases", DatabaseLive.Index, :index)
   end
 
   # Other scopes may use custom stacks.
